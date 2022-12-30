@@ -1,8 +1,11 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Ana Sayfa";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section id="hero" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Abdullah Yücel</h1>
+        <h2>Web Developer, Structural Design Engineer</h2>
+        <a asp-controller="Home" asp-action="About" class="btn-about">About Me</a>
+    </div>
+</section><!-- End Hero -->
