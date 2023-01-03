@@ -31,7 +31,7 @@ namespace abdullahyucel.Controllers
         {
             return View();
         }
-        public IActionResult Resume()
+        public IActionResult Blog()
         {
             return View();
         }

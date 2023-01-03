@@ -2,10 +2,24 @@
     ViewData["Title"] = "Ana Sayfa";
 }
 
-<section id="hero" class="d-flex align-items-center">
+
+
+<section id="hero" class="d-flex  ">
     <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
-        <h1>Abdullah Yücel</h1>
-        <h2>Web Developer, Structural Design Engineer</h2>
+
+
+        <div class="indexpic">
+            <img src="/img/IMG-6058.jpg" class="indexpic "  alt="">
+
+        </div>
+        <br />
+
+        <h1 class="p-0">Abdullah Yücel</h1>
+        <h2>Software Developer (MCSD),<br /> Structural Design Engineer</h2>
         <a asp-controller="Home" asp-action="About" class="btn-about">About Me</a>
+        <a asp-controller="Home" asp-action="Resume" class="btn-about">Resume</a>
+        <a asp-controller="Home" asp-action="Portfolio" class="btn-about">Portfolio</a>
+
+
     </div>
 </section><!-- End Hero -->

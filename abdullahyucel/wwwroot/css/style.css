@@ -432,12 +432,12 @@ h6 {
 #hero {
     width: 100%;
     height: 100vh;
-    background: url("../img/pexels-elina-sazonova-1838592.jpg") top right;
+    background:url("../img/herobackground.jpg") top center;
     background-size:cover;
 }
 
 #hero .container {
-  padding-top: 70px;
+  padding-top: 90px;
   position: relative;
 }
 
@@ -449,16 +449,16 @@ h6 {
 
 #hero h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 56px;
   color: #222222;
 }
 
 #hero h2 {
-  color: #6f6f6f;
+  color: #222222;
   margin: 10px 0 0 0;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 #hero .btn-about {
@@ -489,7 +489,7 @@ h6 {
 @media (max-width: 992px) {
   #hero:before {
     content: "";
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3);
     position: absolute;
     bottom: 0;
     top: 0;
@@ -503,8 +503,9 @@ h6 {
   }
 
   #hero h2 {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
+    text-align:center;
   }
 }
 
@@ -703,6 +704,16 @@ section {
   border: 4px solid #fff;
   margin: 0 auto;
 }
+
+.indexpic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid ;
+    margin: 0 auto;
+}
+
+
 
 .testimonials .testimonial-item h3 {
   font-size: 20px;
@@ -1315,3 +1326,5 @@ section {
 #footer .credits a {
   color: #34b7a7;
 }
+
+
