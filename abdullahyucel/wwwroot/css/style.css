@@ -197,7 +197,7 @@ h6 {
 }
 
 .navbar li {
-  position: relative;
+  position:relative;
   padding: 10px 0 10px 28px;
 }
 
@@ -432,13 +432,13 @@ h6 {
 #hero {
     width: 100%;
     height: 100vh;
-    background:url("../img/herobackground.jpg") top center;
-    background-size:cover;
+    background:url("../img/bg-2.jpg") center no-repeat fixed;
 }
 
 #hero .container {
   padding-top: 90px;
-  position: relative;
+  
+  position:center;
 }
 
 @media (max-width: 992px) {
