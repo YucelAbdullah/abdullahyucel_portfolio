@@ -1,5 +1,6 @@
 ﻿using abdullahyucel.Models;
 using Microsoft.AspNetCore.Mvc;
+using NETCore.MailKit.Core;
 using System.Diagnostics;
 
 namespace abdullahyucel.Controllers
@@ -7,10 +8,15 @@ namespace abdullahyucel.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IEmailService emailService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(
+            ILogger<HomeController> logger,
+            IEmailService emailService
+            )
         {
             _logger = logger;
+            this.emailService = emailService;
         }
 
         public IActionResult Index()
@@ -24,6 +30,12 @@ namespace abdullahyucel.Controllers
         }
 
         public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Contact(ContactUsViewModel model)
         {
             return View();
         }
