@@ -13,14 +13,14 @@ builder.Services.AddMailKit(optionBuilder =>
     optionBuilder.UseMailKit(new MailKitOptions()
     {
         //get options from sercets.json
-        Server = "smtp.mailtrap.io",
-        Port = 2525,
+        Server = "smtp.gmail.com",
+        Port = 465,
         SenderName = "abdulahyucel.com",
-        SenderEmail = "abdullahyuucel@gmail.com",
+        SenderEmail = "abdullahyucelcom@gmail.com",
 
         // can be optional with no authentication 
-        Account = "d867e7c0d64e22",
-        Password = "fbb717caa1162c",
+        Account = "abdullahyucelcom@gmail.com",
+        Password = "brraaeaitshcgzoz",
         // enable ssl or tls
         Security = true
     });

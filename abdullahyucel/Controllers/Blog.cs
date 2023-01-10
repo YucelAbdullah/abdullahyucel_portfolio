@@ -12,5 +12,10 @@ namespace abdullahyucel.Controllers
         {
             return View();
         }
+
+        public IActionResult MailKit()
+        {
+            return View();
+        }
     }
 }

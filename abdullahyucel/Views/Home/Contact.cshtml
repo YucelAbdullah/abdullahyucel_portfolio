@@ -3,6 +3,20 @@
     ViewData["Title"] = "Bana Ulaşın";
 }
 
+<br />
+<br />
+<br />
+<br />
+@if (TempData["messageSent"] != null)
+{
+    <div class="alert alert-success">
+        <h3>Thank you!</h3>
+        <p>
+            Your message has reached us
+        </p>
+    </div>
+}
+
 <main id="main">
 
     <!-- ======= Contact Section ======= -->
@@ -35,10 +49,10 @@
                         </div>
 
                         @*<div class="phone">
-                            <i class="bi bi-phone"></i>
-                            <h4>Call:</h4>
-                            <p></p>
-                        </div>*@
+                                <i class="bi bi-phone"></i>
+                                <h4>Call:</h4>
+                                <p></p>
+                            </div>*@
 
                     </div>
 
@@ -46,27 +60,36 @@
 
                 <div class="col-lg-8 mt-5 mt-lg-0">
 
-                    <form  method="post" role="form" class="php-email-form">
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    <form method="post">
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label" asp-for="Name"> </label>
+                                    <input class="form-control" asp-for="Name" />
+                                    <span asp-validation-for="Name"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" asp-for="Email"> </label>
+                                    <input class="form-control" asp-for="Email" />
+                                    <span asp-validation-for="Email"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" asp-for="Subject"> </label>
+                                    <input class="form-control" asp-for="Subject" />
+                                    <span asp-validation-for="Subject"></span>
+                                </div><div class="form-group">
+                                    <label class="form-label" asp-for="Message"> </label>
+                                    <textarea class="form-control" asp-for="Message"></textarea>
+                                    <span asp-validation-for="Message"></span>
+                                </div>
+                                <br />
+                                <button type="submit" class="btn btn-primary d-flex ms-auto">
+                                    <i class="bi bi-send">Mesajını Gönder</i>
+                                </button>
                             </div>
-                            <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                            </div>
-                        </div> 
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                         </div>
-                        <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Send Message</button></div>
+
                     </form>
 
                 </div>
@@ -77,3 +100,8 @@
     </section><!-- End Contact Section -->
 
 </main><!-- End #main -->
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+}

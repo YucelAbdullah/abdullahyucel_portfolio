@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Mail Services";
+}
+
+
+
+<br />
+<br />
+<br />
+<br />
+
+
+
+<div class="card ms-3" style="max-width: 92%;">
+    <div class="row g-0">
+
+        <div class="col-md-12">
+            <div class="card-body">
+                <h5 class="card-title mb-3">
+                    <strong>
+                        C# PROGRAMLA DİLİNDE EMAİL SERVİSLERİ KULLANIMI
+                        .NETCORE.MAİLKİT VE GMAİL SMTP AYARLARI
+                    </strong>
+                </h5>
+                <p class="card-text"> .NETCore üzerinde hazırlamış olduğumuz web uygulamalarında sıklıkla mail servisleri kullanımına ihtiyaç duyulmaktadır. Örnek olması bakımından, çoğu web sitesi uygulamasında bulunan iletişime geçin bölümleri üzerinden kullanıcılardan isim, Email adresleri ve göndermek istedikleri mesaj metinleri önceden hazırlanan bir form vasıtası ile kullanıcıdan alınarak mail aracılığı ile istenilen kişiye ulaştırılmaktadır. Yapmış olduğum araştırmalar doğrultusunda edindiğim tecrübeleri, sizlere de faydası olabileceğini düşündüğüm için, uygulama sıralaması ile sizlerle paylaşmak istiyorum.</p>
+                <p class="card-text"> İlk olarak kullanıcıdan alacağımız bilgileri kapsayan form oluşturma işlemi öncesi Model bölümü içerinde yeni bir bir class oluşturulması gerekmektedir. Bu class içerisinde kullanıcıdan alacağımız verileri, veri türlerini ve Data Annotations bilgilerini doldurmamız gerekmektedir. Model içerisinde gerekli olan class hazırlandıktan sonra kullanıcıdan doldurulması istenen form, View  üzerinden post methodu ile hazırlanır.</p>
+                <div class="row">
+                    <div class=" col-6 col-md-12  mb-3">
+                        <img src="~/img/Blog/ContactUsViewModel.PNG" height="480" width="720" class="img-fluid m-3 border" alt="...">
+                        <img src="~/img/Blog/View.PNG" height="480" width="720" class="img-fluid m-3 border" alt="...">
+                    </div>
+                </div>
+                <p class="card-text"> Kullanıcıdan almak istediğimiz verileri belirledik ve bunu kullanıcıya bir form olarak sunduk. Şimdi sırada kullanıcı Mesajını Gönder butonuna bastıktan bilgiyi ulaştırma konusu var. Bunun için Nuget Manager üzerinden .NETCore.Mailkit paketi indirildikten ve Program.cs üzerinden Service dosyalarına görsellerde belirtildiği gibi eklenir. MailKit paketimiz servislere tanıtıldıktan sonra proje üzerinde istediğimiz yerde inject ederek kullanabiliriz. </p>
+                <div class="row">
+                    <div class=" col-6 col-md-12 text-center mb-3">
+                        <img src="~/img/Blog/Services.png" height="480" width="720" class="img-fluid m-3 border" alt="...">
+                    </div>
+
+                </div>
+
+                <p class="card-text"> Gmail SMTP (Simple Mail Transfer Protocol) konusuna geldiğimizde, öncelikli olarak  gmail hesabımız üzerinde bazı ayarların yapılması gerekmektedir.  İlk olarak Gmail hesabımıza giriş yapıyoruz. Google hesabınızı Yönetim kısmından Güvenlik bölümünden 2 adımlı doğrulama seçeneğini aktif hale getiriyoruz. Account kısmına kendi gmail hesap adresimizi, Port kısmına 465 portunu yazdıktan sonra Password kısmı için yine aynı bölümde bulunan Uygulama şifreleri kısmına girerek uygulama seçin kısmında Posta, cihaz seçin kısmında Diğer ve  isim seçeneğine ise SMTP yazılarak 16 haneli bir şifre alınır. Alınan bu şifre Program.cs dosyası içerisinde MailKit Servisinin içerine eklenerek mail sistemi çalışır hale getirilir.  </p>
+                <div class="row">
+                    <div class=" col-6 col-md-12 text-center mb-3">
+                        <img src="~/img/Blog/gmail SMTP settings.PNG" height="480" width="720" class="img-fluid m-3 border" alt="...">
+                    </div>
+                    <div class=" col-6 col-md-12 text-center mb-3">
+                        <img src="~/img/Blog/Google Güvenlik.PNG" height="480" width="720" class="img-fluid m-3 border" alt="...">
+                        <img src="~/img/Blog/Google SMTPPassword.PNG" height="480" width="720" class="img-fluid m-3 border" alt="...">
+                    </div>
+                </div>
+
+                <p class="card-text"><small class="text-muted">Last updated @DateTime.UtcNow</small></p>
+            </div>
+        </div>
+    </div>
+</div>

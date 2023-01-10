@@ -37,6 +37,8 @@ namespace abdullahyucel.Controllers
         [HttpPost]
         public IActionResult Contact(ContactUsViewModel model)
         {
+            emailService.Send("abdullahyucelcom@gmail.com", $"abdullahyucel.com---Konu:{model.Subject}", $"{model.Subject}\n---{model.Name}\n---{model.Email}\n---{model.Message}", true);
+            TempData["messageSent"]= true;
             return View();
         }
         public IActionResult Portfolio()
